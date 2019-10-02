@@ -1,0 +1,23 @@
+query($organizationLogin: String!, $pageSize: Int!, $cursor: String) {
+  organization(login: $organizationLogin) {
+    repositories(
+      privacy: PRIVATE
+      orderBy: { field: PUSHED_AT, direction: ASC }
+      first: $pageSize
+      after: $cursor
+    ) {
+      edges {
+        cursor
+        node {
+          name
+          url
+          pushedAt
+          owner {
+            id
+            login
+          }
+        }
+      }
+    }
+  }
+}

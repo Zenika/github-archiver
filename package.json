@@ -1,0 +1,24 @@
+{
+  "name": "github-archiver",
+  "version": "1.0.0",
+  "description": "A tool to backup unused private GitHub repos to Google Drive",
+  "private": true,
+  "scripts": {
+    "start": "node --require ts-node/register --require dotenv/config index.ts"
+  },
+  "devDependencies": {
+    "@types/archiver": "^3.0.0",
+    "@types/node": "^12.7.8",
+    "@types/node-fetch": "^2.5.2",
+    "@types/rimraf": "^2.0.2",
+    "dotenv": "^8.1.0",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.7.0-beta"
+  },
+  "dependencies": {
+    "archiver": "^3.1.1",
+    "googleapis": "^43.0.0",
+    "node-fetch": "^2.6.0",
+    "rimraf": "^3.0.0"
+  }
+}
